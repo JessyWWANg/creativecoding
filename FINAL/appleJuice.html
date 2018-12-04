@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>p5.js example</title>
+    <style> body {padding: 0; margin: 0;} </style>
+    <script src="p5.min.js"></script>
+    <script src="../addons/p5.dom.min.js"></script>
+    <script src="../addons/p5.sound.min.js"></script>
+    <script src="sketch.js"></script>
+  </head>
+  <body>
+    <p>You see a desk.</p>
+    <p>There's a banana and a mirror on the desk.</p>
+    <a href="eat1.html">eat</a>
+    <a href="putBack1.html">put back</a>
+    <script>
+      var apple = false;
+      function setup(){
+        createCanvas(500,500);
+        background(50);
+        appleB = createButton("Banana");
+        appleB.position(100,100);
+        appleB.mousePressed(printA);
+
+        mirror = createButton("Mirror");
+        mirror.position(120,120);
+        mirror.mousePressed(printB);
+      }
+      function draw(){
+
+      }
+      function printA(){
+        fill(100);
+        text("It's a banana.",300,300);
+        apple = true;
+        console.log(apple);
+
+        text("You see yourself.",400,400);
+      }
+
+    </script>
+  </body>
+</html>
